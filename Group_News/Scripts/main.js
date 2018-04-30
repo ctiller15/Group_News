@@ -16,26 +16,34 @@ app.config(function ($routeProvider) {
 
 
 app.controller("DashController", ["$scope", "$http", function ($scope, $http) {
-        $scope.categories = [];
-        $scope.stories = [];
+    $scope.categories = [];
+    $scope.stories = [];
 
-        const getCategories = () => {
-            let catURL = "/api/categories"
-            $http({
-                method: "GET",
-                url: catURL
-            }).then(resp => {
-                $scope.categories = resp.data
-            })
-        }
+    const getCategories = () => {
+        let catURL = "/api/categories"
+        $http({
+            method: "GET",
+            url: catURL
+        }).then(resp => {
+            $scope.categories = resp.data
+            console.log("The response is:", resp.data);
+        })
+    }
 
-        const getStories = () => {
-            let storiesURL = "/api/stories"
-            $http({
-                method: "GET",
-                url: storiesURL
-            }).then(resp => {
-                $scope.stories = resp.data;
-            })
-        }
-    }]);
+    const getStories = () => {
+        let storiesURL = "/api/stories"
+        $http({
+            method: "GET",
+            url: storiesURL
+        }).then(resp => {
+            $scope.stories = resp.data;
+            console.log("The stories response is:", resp.data)
+        })
+    }
+
+    getCategories();
+    getStories();
+
+
+
+}]);

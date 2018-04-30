@@ -5,8 +5,12 @@
 </div>
 <!--TopNews Section-->
 <section>
-    <div class="panel panel-primary">
-        <div class="panel-heading" ng-repeat="category in categories track by $Index">{{category.name}}</div>
-        <div class="panel-body" ng-repeat="article in category track by $Index">{{article.headline}}</div>
+    <div class="panel" ng-repeat="category in categories track by $index">
+        <div class="panel-heading"><h3>{{category.Name}}</h3></div>
+        <div class="panel-body">
+            <ul class="list-group">
+                <li class="list-group-item" ng-repeat="story in stories track by $index" ng-if="story.Category.Name==category.Name">{{story.Headline}} </li>
+            </ul>
+        </div>
     </div>
 </section>
