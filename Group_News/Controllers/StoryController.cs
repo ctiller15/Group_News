@@ -22,7 +22,7 @@ namespace Group_News.Controllers
         {
             using(var db = new GroupNewsContext())
             {
-                return db.Stories.OrderBy(o => o.Headline).ToList(); 
+                return db.Stories.Include(i => i.Category).Include(i => i.Author).OrderBy(o => o.Headline).ToList(); 
             }
         }
 
