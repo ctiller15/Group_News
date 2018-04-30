@@ -25,4 +25,4 @@ angular
                 $scope.stories = resp.data;
             })
         }
-    }
+    }]);
