@@ -12,6 +12,9 @@ app.config(function ($routeProvider) {
         templateUrl: "/Scripts/app/views/submit.html",
         controller: "SubmitController"
     })
+
+    $routeProvider.otherwise({ redirectTo: "/Dashboard" });
+
 })
 
 
