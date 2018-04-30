@@ -6,6 +6,7 @@ using System.Net.Http;
 using System.Web.Http;
 using System.Data.Entity;
 using Group_News.Models;
+using Group_News.ViewModels;
 using Group_News.Context;
 
 namespace Group_News.Controllers
@@ -34,5 +35,14 @@ namespace Group_News.Controllers
                 return Ok(query);
             }
         }
+
+        // POST: Have a user insert a story
+        [HttpPost]
+        [Route("api/stories")]
+        public IHttpActionResult PostStory([FromBody]EnterStory StoryData)
+        {
+            return Ok();
+        }
+
     }
 }
