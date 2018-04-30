@@ -193,6 +193,14 @@
     <Compile Include="Migrations\201804301704337_CreateTables.Designer.cs">
       <DependentUpon>201804301704337_CreateTables.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201804301725177_SeedDatabase.cs" />
+    <Compile Include="Migrations\201804301725177_SeedDatabase.Designer.cs">
+      <DependentUpon>201804301725177_SeedDatabase.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201804301731448_ModifySeed.cs" />
+    <Compile Include="Migrations\201804301731448_ModifySeed.Designer.cs">
+      <DependentUpon>201804301731448_ModifySeed.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Author.cs" />
     <Compile Include="Models\Category.cs" />
@@ -270,6 +278,12 @@
   <ItemGroup>
     <EmbeddedResource Include="Migrations\201804301704337_CreateTables.resx">
       <DependentUpon>201804301704337_CreateTables.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201804301725177_SeedDatabase.resx">
+      <DependentUpon>201804301725177_SeedDatabase.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201804301731448_ModifySeed.resx">
+      <DependentUpon>201804301731448_ModifySeed.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
