@@ -24,5 +24,15 @@ namespace Group_News.Controllers
         }
 
 
+        [HttpGet]
+        [Route("api/stories/{storyID}")]
+        public IHttpActionResult GetOneStory(int storyID)
+        {
+            using (var db = new GroupNewsContext())
+            {
+                var query = db.Stories.SingleOrDefault(s => s.ID == storyID);
+                return Ok(query);
+            }
+        }
     }
 }
