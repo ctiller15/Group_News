@@ -23,7 +23,7 @@ namespace Group_News
             bundles.Add(new StyleBundle("~/Content/css").Include(
                       "~/Content/bootstrap.css",
                       "~/Content/site.css"));
-            bundles.Add(new ScriptBundle("~/bundles/angular").Include("~/Scripts/angular.min.js", "~/Scripts/angular-route.min.js", "~/Scripts/main.js"));
+            bundles.Add(new ScriptBundle("~/bundles/angular").Include("~/Scripts/angular.js", "~/Scripts/angular-route.js", "~/Scripts/main.js"));
         }
     }
 }

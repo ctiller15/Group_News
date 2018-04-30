@@ -14,6 +14,36 @@ app.config(function ($routeProvider) {
     })
 })
 
+app.controller("SubmitController", ["$scope", "$http", function ($scope, $http) {
+    $scope.body = {
+        UserName: "",
+        Body: "",
+        Category: "",
+        Headline: ""
+    };
+
+    $scope.postBody = () => {
+        postBody();
+    };
+        
+    const postBody = () => {
+        console.log($scope.body);
+        let temp = $scope.body;
+        $http({
+            method: "POST",
+            url: "/api/stories",
+            //data: $scope.body
+            data: {
+                UserName: temp.UserName,
+                Body: temp.Body,
+                Category: temp.Category,
+                Headline: temp.Headline
+            }
+        }).then(resp => {
+            console.log(resp.data);
+        });
+    }
+}]);
 
 app.controller("DashController", ["$scope", "$http", function ($scope, $http) {
     $scope.categories = [];
@@ -40,6 +70,8 @@ app.controller("DashController", ["$scope", "$http", function ($scope, $http) {
             console.log("The stories response is:", resp.data)
         })
     }
+
+
 
     getCategories();
     getStories();
