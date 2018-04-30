@@ -2,7 +2,7 @@
 
 angular
     .module("main", [])
-    .controller("Controller", ["$scope", "$http", ($scope, $http) => {
+    .controller("StoryController", ["$scope", "$http", ($scope, $http) => {
         $scope.categories = [];
         $scope.stories = [];
 
