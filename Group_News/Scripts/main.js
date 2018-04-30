@@ -1,8 +1,21 @@
 ﻿console.log("App was loaded");
 
-angular
-    .module("main", [])
-    .controller("StoryController", ["$scope", "$http", ($scope, $http) => {
+const app = angular.module("main", ["ngRoute"]);
+
+app.config(function ($routeProvider) {
+    $routeProvider.when("/Dashboard", {
+        templateUrl: "/Scripts/app/views/dashboard.html",
+        controller: "DashController"
+    })
+
+    $routeProvider.when("/Submit", {
+        templateUrl: "/Scripts/app/views/submit.html",
+        controller: "SubmitController"
+    })
+})
+
+
+app.controller("DashController", ["$scope", "$http", function ($scope, $http) {
         $scope.categories = [];
         $scope.stories = [];
 

@@ -1,13 +1,2 @@
-﻿<!--Header-->
-<div class="jumbotron">
-    <h1>Welcome to Faker News</h1>
-    <p class="lead">Where the news is fake and the facts don't matter.</p>
-</div>
-<!--TopNews Section-->
-<section>
-    <div class="panel panel-primary">
-        <div class="panel-heading" ng-repeat="category in categories track by $Index">{{category.name}}</div>
-        <div class="panel-body" ng-repeat="article in category track by $Index">{{article.headline}}</div>
-    </div>
-</section>
+﻿<div ng-view></div>
 
