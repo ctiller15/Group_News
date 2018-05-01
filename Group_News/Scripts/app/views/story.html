@@ -1,15 +1,14 @@
-﻿<section>
-    <h1>{{storyData.Headline}}</h1>
-    <section class="metaData">
-        <!-- We can style this to look nice later. -->
-        <ul>
-            <li>Author: {{storyData.Author.Name}}</li>
-            <li>Category: {{storyData.Category.Name}}</li>
-            <li>Date: {{storyData.CreationDate}}</li>
+﻿<section class="panel panel-default">
+    <div class="panel-heading">
+        <h1 class="metaData panel-title">{{storyData.Headline}}</h1>
+    </div>
+    <!-- We can style this to look nice later. -->
+    <section class="panel-body">
+        <ul class="list-group">
+            <li class="list-group-item">Author: {{storyData.Author.Name}}</li>
+            <li class="list-group-item">Category: {{storyData.Category.Name}}</li>
+            <li class="list-group-item">Date: {{storyData.CreationDate}}</li>
         </ul>
-    </section>
-
-    <section class="body-content">
-        <p>{{storyData.Body}}</p>
+        {{storyData.Body}}
     </section>
 </section>
