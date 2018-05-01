@@ -10,7 +10,7 @@
         <div class="panel-heading"><h3>{{category.Name}}</h3></div>
         <div class="panel-body">
             <ul class="list-group">
-                <li class="list-group-item" ng-repeat="story in stories track by $index" ng-if="story.Category.Name==category.Name">{{story.Headline}} </li>
+                <li class="list-group-item" ng-repeat="story in stories track by $index" ng-if="story.Category.Name==category.Name"><a href="/#!/Stories/{{story.ID}}">{{story.Headline}}</a> </li>
             </ul>
         </div>
     </div>

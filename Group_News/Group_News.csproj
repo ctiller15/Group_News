@@ -223,6 +223,7 @@
     <Content Include="Scripts\angular.js" />
     <Content Include="Scripts\angular.min.js" />
     <Content Include="Scripts\app\views\dashboard.html" />
+    <Content Include="Scripts\app\views\story.html" />
     <Content Include="Scripts\app\views\Submit.html" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
