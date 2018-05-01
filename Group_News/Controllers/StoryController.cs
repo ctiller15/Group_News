@@ -33,7 +33,7 @@ namespace Group_News.Controllers
         {
             using (var db = new GroupNewsContext())
             {
-                var query = db.Stories.SingleOrDefault(s => s.ID == storyID);
+                var query = db.Stories.Include(i => i.Author).Include(i => i.Category).SingleOrDefault(s => s.ID == storyID);
                 return Ok(query);
             }
         }
